@@ -1,0 +1,8 @@
+<div class="admin-page">
+    <app-header></app-header>
+    <app-search [rating]="rating" [location]="location" [getPrice]="getPrice" [starCount]="starCount" [color]="starColor" (ratingUpdated)="onRatingChanged($event)" (locationUpdated)="onLocationChanged($event)" (priceUpdated)="onPriceChanged($event)"></app-search>
+    <div class="container">
+        <router-outlet></router-outlet> 
+    </div>
+    <app-footer></app-footer>
+</div>

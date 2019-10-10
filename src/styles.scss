@@ -1,0 +1,352 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700"); */
+
+$margin_10: 10px;
+$margin_left_10: 10px;
+$margin_right_10: 10px;
+$margin_top_10: 10px;
+$margin_bottom_10: 10px;
+
+$padding_10: 10px;
+$padding_left_10: 10px;
+$padding_right_10: 10px;
+$padding_top_10: 10px;
+$padding_bottom_10: 10px;
+
+$no_margin: 0px;
+$no_margin_left: 0px;
+$no_margin_right: 0px;
+$no_margin_top: 0px;
+$no_margin_bottom: 0px;
+
+$no_padding: 0px;
+$no_padding_left: 0px;
+$no_padding_right: 0px;
+$no_padding_top: 0px;
+$no_padding_bottom: 0px;
+
+$font_size_16:16px;
+$font_family:Montserrat,sans-serif;
+
+$white_color: #ffffff;
+$grey_color: #f6f6f6;
+$black_color:#000000;
+$dark_grey_color:#565656;
+$width_100: 100%;
+$height_100: 100%;
+html{
+  height:$height_100;
+}
+h1,h2,h3,h4,h5,p,span,i,ul,li,a,button,input,textarea{
+  color:$dark_grey_color;
+  font-family:$font_family;
+}
+p,a{
+  font-size:$font_size_16;
+  font-family: $font_family;
+}
+body{
+  background:$grey_color;
+  font-family: $font_family;
+  height:$height_100;
+  background:$white_color;
+}
+.no-padding{
+    padding:$no_padding;
+}
+.no-padding-top{
+    padding:$no_padding_top;
+}
+.no-padding-right{
+    padding:$no_padding_right;
+}
+.no-padding-bottom{
+    padding:$no_padding_bottom;
+}
+.no-padding-left{
+    padding:$no_padding_left;
+}
+/************HEADER****************/
+header {
+  .main-menu{
+    background-color: $white_color;
+    border-bottom: 1px solid $grey_color;
+    color: $black_color;
+    padding:$padding_top_10 0px $padding_bottom_10 0px;
+    .navbar-nav{
+        .nav-link {
+            color: $black_color;
+            font-size:$font_size_16;
+            text-transform: uppercase;
+        }
+    }
+    /* logo */
+      .navbar-brand{
+        padding: 0;
+        img{
+          width: 200px;
+          margin: 2px 0px;
+        }
+      }
+    /* language  */
+    .language-flag{
+      li{
+        a{
+          padding-top:$padding_top_10;
+          padding-bottom:$padding_bottom_10;
+          span{
+            background-size: 40px;
+            display: inline-block;
+            height: 32.19512px;
+            width: 40px;
+            background-image: url(assets/images/juicy-flag-sprite-5.svg);
+            &.en{
+              background-position: 0 2px;
+            }
+            &.vi{
+              background-position: 0 -577.5122px;
+            }
+          }
+        }
+      }
+      
+    }
+
+  }
+}
+.spinner{
+    position: absolute;
+    background: #fff;
+    z-index: 999999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    display: table;
+    .spinner-box{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        .mat-progress-spinner{
+            display:inline-block;
+        }
+    }
+}
+li.current{
+    span{
+        color:#fff;
+    }
+}
+/** search and filter**/
+#search{
+    margin-top: 100px;
+    background:$white_color;
+    margin-bottom:$margin_bottom_10;
+    box-shadow: 0px 0px 5px #ccc;
+    
+    .star-rating{
+        h2{
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+        .mat-icon {
+            color: #ffc300;
+        }
+    }
+    button{
+        outline: 0;
+    }
+    .price-filter{
+        h2{
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+        mat-slider {
+            width: 100%;
+        }          
+    }
+    .search-body{
+        position: relative;
+        .form-group{
+            margin-bottom:0px;
+            position:relative;
+            input{
+                padding-left:30px;
+            }
+            .fa-search{
+                position:absolute;
+                top:10px;
+                left:10px;
+            }
+        }
+    }
+    button.btn-primary{
+        padding: 5px;
+        margin-top: 31px;
+    }
+}
+
+.destination{
+    padding:30px 0px;
+    .show-rating{
+        position: absolute;
+        top: 0;
+        right: 0px;
+        z-index: 100;
+        width: 100%;
+        text-align: right;
+    }
+    .show-score{
+        position: absolute;
+        top: 3px;
+        z-index: 100;
+        left: 0px;
+        padding: 10px;
+        color: #fff;
+        span{
+            color: #fff;
+            background: #ff3322;
+            padding: 10px 5px;
+            border-radius: 5px;
+        }
+    }
+    .mat-icon {
+        font-size: 20px;
+        color: #ffc300;
+    }
+    .mat-icon-button{
+        width:25px;
+    }
+}
+.destination-box{
+    position: relative;
+    margin-bottom:30px;
+    .mat-button{
+        position: relative;
+        &:before{
+            position: absolute;
+            content: "+";
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            left: 0;
+            z-index: 99;
+            font-size: 45px;
+            color: #fff;
+            line-height: 250px;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s linear;
+            transition:all 0.3s linear;
+        }
+        &:hover:before{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .extra-bold{
+        color:#000;
+    }
+    &>a{
+        padding:0px;
+        img{
+            width:100%;
+            height:255px;
+        }
+    }
+    .destination-meta{
+        position:absolute;
+        left:0;
+        background: rgba(0,0,0,0.3);
+        width:100%;
+        padding: 0px 15px;
+        bottom: 7px;
+        h2{
+            margin-bottom:0px;
+            a{
+                font-size:$font_size_16;
+                color:$white_color;
+                text-transform: uppercase;
+                &:hover{
+                    text-decoration: none;
+                    color: #ffc300;
+                }
+            }
+        }
+        p{
+            margin-bottom:10px;
+            color:$white_color;
+        }
+    }
+}
+agm-map {
+    height: 500px;
+  }
+.inforHotel{
+    p{
+        margin:5px 0px;
+        font-size:15px;
+    }
+    ul{
+        margin-bottom:0px;
+        li{
+            font-size:14px;
+        }
+    }
+}
+.mat-dialog-container{
+    padding: 15px;
+}
+.view-detail-dialog{
+    .mat-dialog-title{
+        margin-bottom: 10px;
+    }
+    .mat-dialog-content{
+        padding:0px;
+        img{
+            height:236px;
+        }
+    }
+    .detail-info{
+        background: #f5fbf6;
+        border: 2px solid #96D99F;
+        padding: 10px;
+        margin: 10px 0px;
+        p{
+            margin: 0px 0px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #000;
+        }
+    }
+    .mat-icon {
+        font-size: 20px;
+        color: #ffc300;
+    }
+    .mat-icon-button{
+        width:25px;
+    }
+}
+.sortbyname{
+    float: right;
+    margin-bottom: 15px;
+    margin-top: -55px;
+}
+footer{
+    background: #fafafa;
+    padding: 5px 0px;
+    p{
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+}
+
+.cdk-overlay-container{
+    z-index: 99999;
+}

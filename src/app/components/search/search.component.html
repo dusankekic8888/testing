@@ -1,0 +1,60 @@
+<div id="search">
+    <div class="container">
+        <!-- <form #search = "ngForm" (ngSubmit)= "onClickSubmit(search)"> -->
+        <div class="row">
+            <div class="col-md-5">
+                <div class="search-body">
+                        <mat-form-field class="search-full-width"> 
+                            <div class="form-group">
+                                <!-- <i class="fa fa-close"></i> -->
+                                <i class="fa fa-search"></i>
+                                <input type="text" 
+                                       class="form-control" 
+                                       matInput
+                                       [formControl]="searchControl" 
+                                       [matAutocomplete]="auto" 
+                                       id="find-location" 
+                                       aria-describedby="find location" 
+                                >
+                                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelectionChanged($event)">
+                                    <mat-option *ngFor ="let address of filteredAddresses | async" [value] = "address">
+                                        {{address}}
+                                    </mat-option>
+                                </mat-autocomplete>
+                            </div>
+                        </mat-form-field>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="star-rating">
+                        <h2>Star Rating</h2>
+                        <button mat-icon-button [color]="color" *ngFor="let ratingId of ratingArr;index as i" [id]="'star_'+i" (click)="onClick(i+1)" matTooltipPosition="above">
+                                <mat-icon>
+                                  {{showIcon(i)}}
+                                </mat-icon>
+                        </button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="price-filter">
+                        <h2>Price</h2>
+                        <mat-slider
+                        thumbLabel
+                        [displayWith]="formatLabel"
+                        tickInterval="1000"
+                        min="1"
+                        #price 
+                        (change)="updateSetting($event)"
+                        [value]="price"
+                        max="100000"></mat-slider>
+                        <span>{{updateShowPrice}}</span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                    <button (click)='onclickSubmitParams()' class="btn btn-primary">Search</button>
+            </div>
+        </div>
+        
+        <!-- </form> -->
+    </div>
+</div>

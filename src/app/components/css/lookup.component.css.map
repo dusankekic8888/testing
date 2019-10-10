@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../lookup/lookup.component.scss"
+    ],
+    "names": [],
+    "file": "lookup.component.css"
+}

@@ -1,0 +1,361 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700"); */
+html {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, p, span, i, ul, li, a, button, input, textarea {
+  color: #565656;
+  font-family: Montserrat, sans-serif;
+}
+
+p, a {
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  background: #f6f6f6;
+  font-family: Montserrat, sans-serif;
+  height: 100%;
+  background: #ffffff;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.no-padding-top {
+  padding: 0px;
+}
+
+.no-padding-right {
+  padding: 0px;
+}
+
+.no-padding-bottom {
+  padding: 0px;
+}
+
+.no-padding-left {
+  padding: 0px;
+}
+
+/************HEADER****************/
+header .main-menu {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f6f6f6;
+  color: #000000;
+  padding: 10px 0px 10px 0px;
+  /* logo */
+  /* language  */
+}
+
+header .main-menu .navbar-nav .nav-link {
+  color: #000000;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+header .main-menu .navbar-brand {
+  padding: 0;
+}
+
+header .main-menu .navbar-brand img {
+  width: 200px;
+  margin: 2px 0px;
+}
+
+header .main-menu .language-flag li a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header .main-menu .language-flag li a span {
+  background-size: 40px;
+  display: inline-block;
+  height: 32.19512px;
+  width: 40px;
+  background-image: url(assets/images/juicy-flag-sprite-5.svg);
+}
+
+header .main-menu .language-flag li a span.en {
+  background-position: 0 2px;
+}
+
+header .main-menu .language-flag li a span.vi {
+  background-position: 0 -577.5122px;
+}
+
+.spinner {
+  position: absolute;
+  background: #fff;
+  z-index: 999999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  display: table;
+}
+
+.spinner .spinner-box {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.spinner .spinner-box .mat-progress-spinner {
+  display: inline-block;
+}
+
+li.current span {
+  color: #fff;
+}
+
+/** search and filter**/
+#search {
+  margin-top: 100px;
+  background: #ffffff;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 0px 5px #ccc;
+          box-shadow: 0px 0px 5px #ccc;
+}
+
+#search .star-rating h2 {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+#search .star-rating .mat-icon {
+  color: #ffc300;
+}
+
+#search button {
+  outline: 0;
+}
+
+#search .price-filter h2 {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+#search .price-filter mat-slider {
+  width: 100%;
+}
+
+#search .search-body {
+  position: relative;
+}
+
+#search .search-body .form-group {
+  margin-bottom: 0px;
+  position: relative;
+}
+
+#search .search-body .form-group input {
+  padding-left: 30px;
+}
+
+#search .search-body .form-group .fa-search {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#search button.btn-primary {
+  padding: 5px;
+  margin-top: 31px;
+}
+
+.destination {
+  padding: 30px 0px;
+}
+
+.destination .show-rating {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  z-index: 100;
+  width: 100%;
+  text-align: right;
+}
+
+.destination .show-score {
+  position: absolute;
+  top: 3px;
+  z-index: 100;
+  left: 0px;
+  padding: 10px;
+  color: #fff;
+}
+
+.destination .show-score span {
+  color: #fff;
+  background: #ff3322;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+.destination .mat-icon {
+  font-size: 20px;
+  color: #ffc300;
+}
+
+.destination .mat-icon-button {
+  width: 25px;
+}
+
+.destination-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.destination-box .mat-button {
+  position: relative;
+}
+
+.destination-box .mat-button:before {
+  position: absolute;
+  content: "+";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  left: 0;
+  z-index: 99;
+  font-size: 45px;
+  color: #fff;
+  line-height: 250px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.destination-box .mat-button:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.destination-box .extra-bold {
+  color: #000;
+}
+
+.destination-box > a {
+  padding: 0px;
+}
+
+.destination-box > a img {
+  width: 100%;
+  height: 255px;
+}
+
+.destination-box .destination-meta {
+  position: absolute;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 0px 15px;
+  bottom: 7px;
+}
+
+.destination-box .destination-meta h2 {
+  margin-bottom: 0px;
+}
+
+.destination-box .destination-meta h2 a {
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.destination-box .destination-meta h2 a:hover {
+  text-decoration: none;
+  color: #ffc300;
+}
+
+.destination-box .destination-meta p {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+agm-map {
+  height: 500px;
+}
+
+.inforHotel p {
+  margin: 5px 0px;
+  font-size: 15px;
+}
+
+.inforHotel ul {
+  margin-bottom: 0px;
+}
+
+.inforHotel ul li {
+  font-size: 14px;
+}
+
+.mat-dialog-container {
+  padding: 15px;
+}
+
+.view-detail-dialog .mat-dialog-title {
+  margin-bottom: 10px;
+}
+
+.view-detail-dialog .mat-dialog-content {
+  padding: 0px;
+}
+
+.view-detail-dialog .mat-dialog-content img {
+  height: 236px;
+}
+
+.view-detail-dialog .detail-info {
+  background: #f5fbf6;
+  border: 2px solid #96D99F;
+  padding: 10px;
+  margin: 10px 0px;
+}
+
+.view-detail-dialog .detail-info p {
+  margin: 0px 0px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+}
+
+.view-detail-dialog .mat-icon {
+  font-size: 20px;
+  color: #ffc300;
+}
+
+.view-detail-dialog .mat-icon-button {
+  width: 25px;
+}
+
+.sortbyname {
+  float: right;
+  margin-bottom: 15px;
+  margin-top: -55px;
+}
+
+footer {
+  background: #fafafa;
+  padding: 5px 0px;
+}
+
+footer p {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+.cdk-overlay-container {
+  z-index: 99999;
+}
+/*# sourceMappingURL=styles.css.map */
